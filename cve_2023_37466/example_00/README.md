@@ -1,5 +1,5 @@
 ### example 00 - vulnerable
-```
+```bash
 $ docker build --tag host.example --file Dockerfile .
 $ docker run -p 8020:3000 -d -t --name example host.example
 
