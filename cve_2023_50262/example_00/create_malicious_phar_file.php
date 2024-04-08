@@ -9,10 +9,14 @@ class SomeClassTheAppLoaded {
     public function __destruct() { system($this->data); }
 }
 
-# suffix is free to be *anything*
-# this would escape suffix check
-# on the server ...
-$phar = new Phar('profile.png');
+# creating a profile.png does *not* work:
+# Fatal error:
+# Uncaught UnexpectedValueException:
+# Cannot create phar 'profile.png'
+# file extension (or combination) not recognised
+#
+# let's just hope the server doesn't check file suffixes ...
+$phar = new Phar('profile.phar');
 $phar->startBuffering();
 
 # phar files with phar:// prefix
