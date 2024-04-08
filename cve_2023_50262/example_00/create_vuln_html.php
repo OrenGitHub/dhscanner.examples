@@ -1,6 +1,6 @@
 <?php
 
-$vuln_font_name = "phar:///uploads/v1/user/profile.phar/test";
+$vuln_font_name = "phar:///uploads/v1/user/profile.png/test";
 
 $v1 = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>";
 $v2 = "<svg xmlns:svg=\"http://www.w3.org/2000/svg\" ";
