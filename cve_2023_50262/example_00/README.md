@@ -1,8 +1,8 @@
 ### Pdf rendering from malicious html file [GHSA_97m3_52wr_xvv2][1]
 
 ```bash
-$ docker build --tag host.GHSA_97m3 --file Dockerfile .
-$ docker run -p 8002:8000 -d -t --name GHSA_97m3 host.GHSA_97m3
+$ docker build --tag host.ghsa_97m3 --file Dockerfile .
+$ docker run -p 8002:8000 -d -t --name ghsa_97m3 host.ghsa_97m3
 $ Set-Variable -Name X -Value (curl.exe -c cookiejar -X GET http://127.0.0.1:8002/token)
 $ echo $X
 kCnrA9SNT7GtFW1jvUQAm3Om9NsmECs487Zd8hhD # <--- good !
