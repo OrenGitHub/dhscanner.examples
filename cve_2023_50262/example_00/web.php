@@ -15,6 +15,14 @@ class SomeClassTheAppLoaded
 
 Route::get('/token', function() { return csrf_token(); });
 
+Route::get('/status', function() {
+    if (file_exists('/frontend/public/pwned')) {
+        return "You've been pwned !\n";
+    } else {
+        return "Everything seems fine\n";
+    }
+});
+
 Route::post('/upload/profile/photo', function (Request $request) {
     $file = $request->file('profile');
     $content = file_get_contents($file);
